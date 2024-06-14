@@ -26,20 +26,24 @@ Now using de Moivre's theorem, we can see than $z = \cos \left(\frac{2\pi k}{n} 
 
 Using this formula we can easily find the coordinates of any polygon
 
-```py
+```
 from math import sin, cos, pi
 
-# returns a list of (x,y) coordinates
-def polygon(n : int):
+# returns a list of (x,y) coordinates for an n-sided polygon
+def polygon(n : int, r : float = 1):
+    if n < 3:
+        raise Exception("n must be greater than 2")
+    
     coordinates = []
     for k in range(n):
-        x = cos(2*pi*k/n)
-        y = sin(2*pi*k/n)
-
-        coordinates.append((x,y))
+        T = 2*pi*k/n
+        p = r*cos(T), r*sin(T)
+        coordinates.append(p)
 
     return coordinates
 ```
+
+What is `r` in this formula? It is not the side length of the polygon, but instead it is the radius of the circle that would fit this polygon, to get a formula for a `l` length polygon, we will need to modify our formula
 
 
 ## Rotation
