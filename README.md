@@ -72,12 +72,9 @@ def polygon(n : int, T : float = 0):
 ## Stars?
 By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-<img src="image3.png" width="300"/>  |  <img src="image4.png" width="300"/>
-
-
-<img src="image5.png" width="300"/>
+n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="image3.png" width="300"/>  |  <img src="image4.png" width="300"/> | <img src="image5.png" width="300"/>
 
 ```py
 # returns a list of (x,y) coordinates for n sided polygon at T degrees
