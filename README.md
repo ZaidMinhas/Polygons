@@ -47,7 +47,7 @@ def polygon(n : int, r : float = 1):
     return coordinates
 ```
 
-What is `r` in this formula? It is not the side length of the polygon, but instead it is the radius of the circle that would fit this polygon, to get a formula for a `l` length polygon, we will need to modify our formula
+What is `r` in this formula? It is not the side length of the polygon, but instead it is the radius of the circle that would fit this polygon, to get a formula for a `l` length polygon, we will need to modify our formula (an exercise for the viewer :) ).
 
 <img src="Images/gif2.gif" width="500"/>
 
