@@ -81,3 +81,58 @@ def polygon(n : int, r : float = 1, t : float = 0, m : int = 1):
         coordinates.append(p)
     return coordinates
 ```
+
+## Some fun
+We can play around with this in MS Paint using pyautogui
+
+```py
+import pyautogui as pag
+import time
+
+time.sleep(2)
+for k in polygon(5,300):
+    pag.dragRel(k)
+```
+
+```py
+time.sleep(2)
+
+x_c, y_c = pag.position()
+
+for t in range(0,360*5, 90):
+    P = polygon(5,300, t)
+    for k in P:
+        pag.dragRel(k)
+```
+
+```py
+time.sleep(2)
+r = 200
+x_c, y_c = pag.position()
+for r in range(0, 300, 30)[::-1]:
+    P = polygon(5,r, 0, 2)
+    pag.moveRel(P[0])
+    for x,y in P + [P[0]]:
+        k = x_c + x, y_c + y
+        pag.dragTo(k)
+    
+    pag.moveTo(x_c, y_c)
+```
+
+
+```py
+time.sleep(2)
+r = 200
+x_c, y_c = pag.position()
+for t in range(0,360, 15):
+    P = polygon(5,r, t)
+    pag.moveRel(P[0])
+    for x,y in P + [P[0]]:
+        k = x_c + x, y_c + y
+        pag.dragTo(k)
+    
+    pag.moveTo(x_c, y_c)
+    r -= 10
+    if (r < 0):
+        break
+```
