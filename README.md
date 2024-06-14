@@ -34,6 +34,7 @@ from math import sin, cos, pi
 
 # returns a list of (x,y) coordinates for an n-sided polygon
 def polygon(n : int, r : float = 1):
+    t *= pi/180
     coordinates = []
     for k in range(n):
         T = 2*pi*k/n
@@ -55,6 +56,7 @@ Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k
 
 ```py
 def polygon(n : int, r : float = 1, t : float = 0):
+    t *= pi/180
     coordinates = []
     for k in range(n):
         T = (t + 2*pi*k)/n
@@ -71,6 +73,7 @@ n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
 
 ```py
 def polygon(n : int, r : float = 1, t : float = 0, m : int = 1):
+    t *= pi/180
     coordinates = []
     for k in range(n):
         T = (t + 2*m*pi*k)/n
