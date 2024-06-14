@@ -25,6 +25,10 @@ An equation $z^n = 1$ has n solutions and using 1 in polar form is $1 = \cos(0 +
 Now using de Moivre's theorem, we can see than $z = \cos \left(\frac{2\pi k}{n} \right) + i \sin \left(\frac{2\pi k}{n} \right), k = \{1,2,...,n\}$
 
 Using this formula we can easily find the coordinates of any polygon
+Joining these points together we get a 3 sided polygon 
+<div>
+<img src="gif1.gif" width="500"/>
+</div>
 
 ```py
 from math import sin, cos, pi
