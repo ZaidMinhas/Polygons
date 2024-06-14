@@ -11,7 +11,7 @@ Solving $z^2 +z +1 = 0$ we get $z = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$, these
 <img src="image.png" width="500"/>
 </div>
 
-Adding these solutions together we get 0 and if we treat these complex numbers as vectors and add them we get a simple triangle
+Joining these points together we get a 3 sided polygon 
 <div>
 <img src="image2.png" width="500"/>
 </div>
