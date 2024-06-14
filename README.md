@@ -15,3 +15,47 @@ Joining these points together we get a 3 sided polygon
 <div>
 <img src="image2.png" width="500"/>
 </div>
+
+This is the general procedure we will use to find the coordinates of any polygon. For an **n** sided polygon, find the solutions of the **nth** root of unity. Now we need to generalize the proceess of finding these solutions as easily as possible
+
+## Finding the **nth** root of unity
+
+An equation $z^n = 1$ has n solutions and using 1 in polar form is $1 = \cos(0 + 2\pi k) + i \sin(0 + 2\pi k)$
+
+Now using de Moivre's theorem, we can see than $z = \cos \left(\frac{2\pi k}{n} \right) + i \sin \left(\frac{2\pi k}{n} \right), k = \{1,2,...,n\}$
+
+Using this formula we can easily find the coordinates of any polygon
+
+```py
+from math import sin, cos, pi
+
+# returns a list of (x,y) coordinates
+def polygon(n : int):
+    coordinates = []
+    for k in range(n):
+        x = cos(2*pi*k/n)
+        y = sin(2*pi*k/n)
+
+        coordinates.append((x,y))
+
+    return coordinates
+```
+
+We can also add a rotation to this formula. Lets say we wish to rotate by T degrees, first we have to convert to T radians.
+Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k}{n} \right), k = \{1,2,...,n\}$
+
+```py
+# returns a list of (x,y) coordinates for n sided polygon at T degrees
+def polygon(n : int, T : float = 0):
+    #convert to radians
+    T *= pi/180
+
+    coordinates = []
+    for k in range(n):
+        x = cos((T + 2*pi*k)/n)
+        y = sin((T + 2*pi*k)/n)
+
+        coordinates.append((x,y))
+  return coordinates
+```
+    
