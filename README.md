@@ -36,7 +36,7 @@ from math import sin, cos, pi
 def polygon(n : int, r : float = 1):
     t *= pi/180
     coordinates = []
-    for k in range(n+1):
+    for k in range(n):
         T = 2*pi*k/n
         p = r*cos(T), r*sin(T)
         coordinates.append(p)
@@ -58,7 +58,7 @@ Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k
 def polygon(n : int, r : float = 1, t : float = 0):
     t *= pi/180
     coordinates = []
-    for k in range(n+1):
+    for k in range(n):
         T = (t + 2*pi*k)/n
         p = r*cos(T), r*sin(T)
         coordinates.append(p)
@@ -75,7 +75,7 @@ n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
 def polygon(n : int, r : float = 1, t : float = 0, m : int = 1):
     t *= pi/180
     coordinates = []
-    for k in range(n+1):
+    for k in range(n):
         T = (t + 2*m*pi*k)/n
         p = r*cos(T), r*sin(T)
         coordinates.append(p)
