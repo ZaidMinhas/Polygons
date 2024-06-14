@@ -10,7 +10,7 @@ Lets say we have the equation $z^3 = 1$, an obvious solution for this is z = 1, 
 
 Solving $z^2 +z +1 = 0$ we get $z = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$, these 3 solutions are the *cube roots of unity*. If we draw these points on an Argand diagram we get the 3 points at $60\degree$ angles of one another, each of length 1.
 
-<img src="image.png" width="300"/>
+<img src="image.png" width="200"/>
 
 Joining these points together we get a 3 sided polygon 
 
