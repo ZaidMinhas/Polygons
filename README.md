@@ -41,6 +41,8 @@ def polygon(n : int):
     return coordinates
 ```
 
+
+## Rotation
 We can also add a rotation to this formula. Lets say we wish to rotate by T degrees, first we have to convert to T radians.
 Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k}{n} \right), k = \{1,2,...,n\}$
 
@@ -58,4 +60,19 @@ def polygon(n : int, T : float = 0):
         coordinates.append((x,y))
   return coordinates
 ```
-    
+## Stars?
+By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
+```py
+# returns a list of (x,y) coordinates for n sided polygon at T degrees
+def polygon(n : int, T : float = 0, m : int = 1):
+    #convert to radians
+    T *= pi/180
+
+    coordinates = []
+    for k in range(n):
+        x = cos((T + 2*pi*k)/n)
+        y = sin((T + 2*pi*k)/n)
+
+        coordinates.append((x,y))
+  return coordinates
+```
