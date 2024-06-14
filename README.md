@@ -34,15 +34,11 @@ from math import sin, cos, pi
 
 # returns a list of (x,y) coordinates for an n-sided polygon
 def polygon(n : int, r : float = 1):
-    if n < 3:
-        raise Exception("n must be greater than 2")
-    
     coordinates = []
     for k in range(n):
         T = 2*pi*k/n
         p = r*cos(T), r*sin(T)
         coordinates.append(p)
-
     return coordinates
 ```
 
@@ -58,18 +54,13 @@ Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k
 <img src="gif3.gif" width="500"/>
 
 ```py
-# returns a list of (x,y) coordinates for n sided polygon at T degrees
-def polygon(n : int, T : float = 0):
-    #convert to radians
-    T *= pi/180
-
+def polygon(n : int, r : float = 1, t : float = 0):
     coordinates = []
     for k in range(n):
-        x = cos((T + 2*pi*k)/n)
-        y = sin((T + 2*pi*k)/n)
-
-        coordinates.append((x,y))
-  return coordinates
+        T = (t + 2*pi*k)/n
+        p = r*cos(T), r*sin(T)
+        coordinates.append(p)
+    return coordinates
 ```
 ## Stars?
 By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
@@ -79,16 +70,11 @@ n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
 <img src="image3.png" width="300"/>  |  <img src="image4.png" width="300"/> | <img src="image5.png" width="300"/>
 
 ```py
-# returns a list of (x,y) coordinates for n sided polygon at T degrees
-def polygon(n : int, T : float = 0, m : int = 1):
-    #convert to radians
-    T *= pi/180
-
+def polygon(n : int, r : float = 1, t : float = 0, m : int = 1):
     coordinates = []
     for k in range(n):
-        x = cos((T + 2*pi*k)/n)
-        y = sin((T + 2*pi*k)/n)
-
-        coordinates.append((x,y))
-  return coordinates
+        T = (t + 2*m*pi*k)/n
+        p = r*cos(T), r*sin(T)
+        coordinates.append(p)
+    return coordinates
 ```
