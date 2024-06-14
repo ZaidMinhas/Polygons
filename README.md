@@ -10,7 +10,7 @@ Lets say we have the equation $z^3 = 1$, an obvious solution for this is z = 1, 
 
 Solving $z^2 +z +1 = 0$ we get $z = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$, these 3 solutions are the *cube roots of unity*. If we draw these points on an Argand diagram we get the 3 points at $60\degree$ angles of one another, each of length 1.
 
-<img src="image.png" width="200"/>
+<img src="image.png" width="300"/>
 
 Joining these points together we get a 3 sided polygon 
 
@@ -67,7 +67,7 @@ By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` poi
 
 n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="image3.png" width="300"/>  |  <img src="image4.png" width="300"/> | <img src="image5.png" width="300"/>
+<img src="image3.png" width="300"/>  |  <img src="image4.png" width="300"/> | <img src="image5.png" width="300"/> |
 
 ```py
 def polygon(n : int, r : float = 1, t : float = 0, m : int = 1):
