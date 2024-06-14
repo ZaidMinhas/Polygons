@@ -26,7 +26,7 @@ Now using de Moivre's theorem, we can see than $z = \cos \left(\frac{2\pi k}{n} 
 
 Using this formula we can easily find the coordinates of any polygon
 
-```
+```py
 from math import sin, cos, pi
 
 # returns a list of (x,y) coordinates for an n-sided polygon
