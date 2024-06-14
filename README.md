@@ -65,7 +65,7 @@ def polygon(n : int, r : float = 1, t : float = 0):
     return coordinates
 ```
 ## Stars?
-By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
+By multiplying a constant `m` into $2\pi k$ we can make the polygon jump `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
 
 n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
 :-------------------------:|:-------------------------:|:-------------------------:
