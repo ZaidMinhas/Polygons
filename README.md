@@ -14,7 +14,7 @@ Solving $z^2 +z +1 = 0$ we get $z = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$, these
 
 Joining these points together we get a 3 sided polygon 
 
-<img src="image2.png" width="300"/>
+<img src="Images/image2.png" width="300"/>
 
 This is the general procedure we will use to find the coordinates of any polygon. For an **n** sided polygon, find the solutions of the **nth** root of unity. Now we need to generalize the proceess of finding these solutions as easily as possible
 
@@ -27,7 +27,7 @@ Now using de Moivre's theorem, we can see than $z = \cos \left(\frac{2\pi k}{n} 
 Using this formula we can easily find the coordinates of any polygon
 Joining these points together we get a 3 sided polygon 
 
-<img src="gif1.gif" width="500"/>
+<img src="Images/gif1.gif" width="500"/>
 
 ```py
 from math import sin, cos, pi
@@ -45,14 +45,14 @@ def polygon(n : int, r : float = 1):
 
 What is `r` in this formula? It is not the side length of the polygon, but instead it is the radius of the circle that would fit this polygon, to get a formula for a `l` length polygon, we will need to modify our formula
 
-<img src="gif2.gif" width="500"/>
+<img src="Images/gif2.gif" width="500"/>
 
 
 ## Rotation
 We can also add a rotation to this formula. Lets say we wish to rotate by T degrees, first we have to convert to T radians.
 Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k}{n} \right), k = \{1,2,...,n\}$
 
-<img src="gif3.gif" width="500"/>
+<img src="Images/gif3.gif" width="500"/>
 
 ```py
 def polygon(n : int, r : float = 1, t : float = 0):
@@ -69,7 +69,7 @@ By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` poi
 
 n = 5, m = 2 |  n = 7, m = 2 | n = 9, m = 5
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="image3.png" width="300"/>  |  <img src="image4.png" width="300"/> | <img src="image5.png" width="300"/> |
+<img src="Images/image3.png" width="300"/>  |  <img src="Images/image4.png" width="300"/> | <img src="Images/image5.png" width="300"/> |
 
 ```py
 def polygon(n : int, r : float = 1, t : float = 0, m : int = 1):
@@ -93,7 +93,7 @@ time.sleep(2)
 for k in polygon(5,300):
     pag.dragRel(k)
 ```
-<img src="gif4.gif" width="300"/>
+<img src="Images/gif4.gif" width="300"/>
 
 ```py
 time.sleep(2)
@@ -105,7 +105,7 @@ for t in range(0,360*5, 90):
     for k in P:
         pag.dragRel(k)
 ```
-<img src="gif5.gif" width="300"/>
+<img src="Images/gif5.gif" width="300"/>
 
 ```py
 time.sleep(2)
@@ -120,7 +120,7 @@ for r in range(0, 300, 30)[::-1]:
     
     pag.moveTo(x_c, y_c)
 ```
-<img src="gif6.gif" width="300"/>
+<img src="Images/gif6.gif" width="300"/>
 
 ```py
 time.sleep(2)
@@ -138,4 +138,4 @@ for t in range(0,360, 15):
     if (r < 0):
         break
 ```
-<img src="gif7.gif" width="300"/>
+<img src="Images/gif7.gif" width="300"/>
