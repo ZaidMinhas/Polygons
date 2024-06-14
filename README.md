@@ -2,6 +2,8 @@
 Drawing a polygon is an easy task, just find the angles and use your protractor and compass to draw the polygon, however not everyone has those tools readily available.
 Thankfully using complex numbers we can find an elegent and simple solution to finding the x,y coordinates of any polygon
 
+[Desmos Page](https://www.desmos.com/calculator/ipufb7wrnv)
+
 ## The roots of unity
 
 Lets say we have the equation $z^3 = 1$, an obvious solution for this is z = 1, but an n degree polynomial should have n solutions. So to get the other 2 solutions we factor out $(z-1)$ from $(z^3-1)$ we get $(z-1)(z^2+z+1) = 0$
