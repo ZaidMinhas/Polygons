@@ -8,11 +8,11 @@ Lets say we have the equation $z^3 = 1$, an obvious solution for this is z = 1, 
 
 Solving $z^2 +z +1 = 0$ we get $z = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$, these 3 solutions are the *cube roots of unity*. If we draw these points on an Argand diagram we get the 3 points at $60\degree$ angles of one another, each of length 1.
 
-<img src="image.png" width="500"/>
+<img src="image.png" width="300"/>
 
 Joining these points together we get a 3 sided polygon 
 
-<img src="image2.png" width="500"/>
+<img src="image2.png" width="300"/>
 
 This is the general procedure we will use to find the coordinates of any polygon. For an **n** sided polygon, find the solutions of the **nth** root of unity. Now we need to generalize the proceess of finding these solutions as easily as possible
 
@@ -72,7 +72,9 @@ def polygon(n : int, T : float = 0):
 ## Stars?
 By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
 
-<img src="image3.png" width="500"/>
+<img src="image3.png" width="300"/>
+<img src="image4.png" width="300"/>
+<img src="image5.png" width="300"/>
 
 ```py
 # returns a list of (x,y) coordinates for n sided polygon at T degrees
