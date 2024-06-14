@@ -29,8 +29,12 @@ Joining these points together we get a 3 sided polygon
 
 <img src="Images/gif1.gif" width="500"/>
 
+
 ```py
 from math import sin, cos, pi
+```
+
+```py
 
 # returns a list of (x,y) coordinates for an n-sided polygon
 def polygon(n : int, r : float = 1):
