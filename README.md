@@ -10,7 +10,7 @@ Lets say we have the equation $z^3 = 1$, an obvious solution for this is z = 1, 
 
 Solving $z^2 +z +1 = 0$ we get $z = -\frac{1}{2} \pm \frac{\sqrt{3}}{2}i$, these 3 solutions are the *cube roots of unity*. If we draw these points on an Argand diagram we get the 3 points at $60\degree$ angles of one another, each of length 1.
 
-<img src="Images/image.png" width="300"/>
+<img src="image.png" width="300"/>
 
 Joining these points together we get a 3 sided polygon 
 
@@ -93,6 +93,7 @@ time.sleep(2)
 for k in polygon(5,300):
     pag.dragRel(k)
 ```
+<img src="gif4.gif" width="300"/>
 
 ```py
 time.sleep(2)
@@ -104,6 +105,7 @@ for t in range(0,360*5, 90):
     for k in P:
         pag.dragRel(k)
 ```
+<img src="gif5.gif" width="300"/>
 
 ```py
 time.sleep(2)
@@ -118,7 +120,7 @@ for r in range(0, 300, 30)[::-1]:
     
     pag.moveTo(x_c, y_c)
 ```
-
+<img src="gif6.gif" width="300"/>
 
 ```py
 time.sleep(2)
@@ -136,3 +138,4 @@ for t in range(0,360, 15):
     if (r < 0):
         break
 ```
+<img src="gif7.gif" width="300"/>
