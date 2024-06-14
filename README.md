@@ -27,7 +27,6 @@ Joining these points together we get a 3 sided polygon
 
 <img src="gif1.gif" width="500"/>
 
-
 ```py
 from math import sin, cos, pi
 
@@ -47,10 +46,14 @@ def polygon(n : int, r : float = 1):
 
 What is `r` in this formula? It is not the side length of the polygon, but instead it is the radius of the circle that would fit this polygon, to get a formula for a `l` length polygon, we will need to modify our formula
 
+<img src="gif2.gif" width="500"/>
+
 
 ## Rotation
 We can also add a rotation to this formula. Lets say we wish to rotate by T degrees, first we have to convert to T radians.
 Now $z = \cos \left(\frac{T + 2\pi k}{n} \right) + i \sin \left(\frac{T + 2\pi k}{n} \right), k = \{1,2,...,n\}$
+
+<img src="gif3.gif" width="500"/>
 
 ```py
 # returns a list of (x,y) coordinates for n sided polygon at T degrees
@@ -68,6 +71,8 @@ def polygon(n : int, T : float = 0):
 ```
 ## Stars?
 By multiplying a constant `m` into $2\pi k$ we can make the polygon skip `m` points. For example lets say for n = 5, m = 2. It starts from point 0,2,4,1,3.
+
+<img src="image3.png" width="500"/>
 ```py
 # returns a list of (x,y) coordinates for n sided polygon at T degrees
 def polygon(n : int, T : float = 0, m : int = 1):
