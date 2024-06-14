@@ -16,7 +16,8 @@ Joining these points together we get a 3 sided polygon
 
 <img src="Images/image2.png" width="300"/>
 
-This is the general procedure we will use to find the coordinates of any polygon. For an **n** sided polygon, find the solutions of the **nth** root of unity. Now we need to generalize the proceess of finding these solutions as easily as possible
+This is the general procedure we will use to find the coordinates of any polygon. For an **n** sided polygon, find the solutions of the **nth** root of unity. Now we need to generalize the proceess of finding these solutions as easily as possible.
+
 
 ## Finding the **nth** root of unity
 
@@ -25,7 +26,10 @@ An equation $z^n = 1$ has n solutions and using 1 in polar form is $1 = \cos(0 +
 Now using de Moivre's theorem, we can see than $z = \cos \left(\frac{2\pi k}{n} \right) + i \sin \left(\frac{2\pi k}{n} \right), k = \{1,2,...,n\}$
 
 Using this formula we can easily find the coordinates of any polygon
-Joining these points together we get a 3 sided polygon 
+Joining these points together we get a 3 sided polygon.
+
+**Note**
+If you draw the sum of these complex numbers as vectors by joining heads with tails, you'll get polygons of unit side length which may be the preferred way of drawing polygons on paper.
 
 <img src="Images/gif1.gif" width="500"/>
 
